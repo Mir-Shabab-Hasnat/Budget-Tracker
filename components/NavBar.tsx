@@ -56,6 +56,11 @@ const NavBarItem = ({link, label} : {link: string, label: string}) => {
             )}>
                 {label}
             </Link>
+            {
+                isActive && (
+                    <div className='absolute -bottom-[2px] left-1/2 hidden h-[2px] w-[80%] -translate-x-1/2 rounded-xl bg-foreground md:block' />
+                )
+            }
         </div>
 
     )
