@@ -1,9 +1,13 @@
-import React from 'react'
+import NavBar from "@/components/NavBar";
+import React, { ReactNode } from "react";
 
-const layout = () => {
+const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>layout</div>
-  )
-}
+    <div className="relative flex h-screen w-full flex-col">
+        <NavBar />
+      <div className="w-full">{children}</div>
+    </div>
+  );
+};
 
-export default layout
+export default layout;
