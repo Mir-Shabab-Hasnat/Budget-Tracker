@@ -67,25 +67,25 @@ const MobileNavBar = () => {
 const DesktopNavBar = () => {
   return (
     <div className="hidden border-separate border-b bg-background md:block">
-      <nav className="container flex items-center justify-between px-8">
-        <div className="flex h-[80px] min-h-[60px] items-center gap-x-4">
-          <Logo />
-          <div className="flex h-full">
-            {items.map((item) => (
-              <NavBarItem
-                key={item.label}
-                link={item.link}
-                label={item.label}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <ThemeSwitcherBtn />
-          <UserButton afterSignOutUrl="/sign-in" />
-        </div>
-      </nav>
+  <nav className="container mx-auto flex items-center justify-between px-8 gap-x-32">
+    <div className="flex h-[80px] min-h-[60px] items-center gap-x-4">
+      <Logo />
+      <div className="flex h-full">
+        {items.map((item) => (
+          <NavBarItem
+            key={item.label}
+            link={item.link}
+            label={item.label}
+          />
+        ))}
+      </div>
     </div>
+    <div className="flex items-center gap-5">
+      <ThemeSwitcherBtn />
+      <UserButton afterSignOutUrl="/sign-in" />
+    </div>
+  </nav>
+</div>
   );
 };
 
